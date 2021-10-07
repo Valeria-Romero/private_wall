@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Wall</title>
+</head>
+<body>
+    <div class="header">
+        <h1 class="wall_title">CodingDojo Wall</h1>
+        <div class="user_nav">
+            <p class="welcome">Hello, {{data['user_first_name']}}!   </p>
+            <a href="/logout">Log out</a>
+        </div>
+    </div>
+
+    <div class="messages_page">
+        <div class="messages_container">
+            <div class="messages">
+                <h2>PLACEHOLDER Message(s) for you</h2>
+                {% for user in users_data%}
+                    <div>
+                        <p>{{user['first_name']}}</p>
+                    </div>
+                    <p>MESSAGE_PLACEHOLDER</p>
+                    <button class="delete"><a href="/delete/message">Delete message</a></button>
+                {% endfor %}
+            </div>
+            <div class="send_message">
+                <h2>Send messages</h2>
+                {% for user in users_data%}
+                <div>
+                    <form action="/send/message" method="POST">
+                        <label for="user">{{user['first_name']}}</label>
+                        <textarea class="message_input" type="text" placeholder="Your message" cols="50" rows="5" name="message_text" id="message_text"></textarea>
+                        <input type="hidden" value="{{user['id']}}" name="user_id" id="user_id">
+                        <button class="send" type="submit">Send message</button>
+                    </form>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

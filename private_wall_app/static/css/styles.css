@@ -1,0 +1,106 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(75, 76, 77);
+    background-color: rgb(75, 76, 77);
+}
+
+.main_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+.login, .registration{
+    width: 20%;
+    height: 100%;
+    background-color: lavender;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    border-radius: 20px;
+}
+
+.registration{
+    margin-right: 30px;
+}
+
+label{
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+button{
+    margin-top: 25px;
+    background-color: indigo;
+    color: white;
+    border: none;
+    height: 35px;
+    font-weight: 700;
+    font-size: large;
+    border-radius: 20px;
+}
+
+h1{
+    color: rgb(75, 76, 77);
+}
+
+input{
+    height: 25px;
+}
+
+.header{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.messages_container, .user_nav{
+    color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+.wall_title{
+    color: white;
+}
+
+.user_nav{
+    align-items: center;
+    justify-content: space-between;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.messages_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 40px;
+}
+
+.welcome{
+    margin-right: 30px;
+}
+
+.message_input{
+    padding-left: 15px;
+    padding-top: 10px;
+}
+
+.send{
+    cursor: pointer;
+}
